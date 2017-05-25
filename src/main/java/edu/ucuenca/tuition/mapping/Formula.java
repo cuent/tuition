@@ -22,8 +22,8 @@ package edu.ucuenca.tuition.mapping;
  */
 public class Formula {
 
-    public static double calculateParameter(String clazz, int m2, int m3) {
-        return mapClass(clazz) * m2 + m3;
+    public static double calculateParameter(String clazz, int m2, int m3, double arancel) {
+        return arancel * (mapClass(clazz) * m2 + m3);
     }
 
     private static double mapClass(String clazz) {

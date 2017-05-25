@@ -43,10 +43,10 @@ public class Payment {
     @GET
     @Path("parameter")
     public Response getPayment(@QueryParam("cedula") String cedula,
-            @QueryParam("m2") int m2, @QueryParam("m3") int m3) {
+            @QueryParam("m2") int m2, @QueryParam("m3") int m3, @QueryParam("m3") double arancel) {
         String clazz = em.createNamedQuery("Student.findClass", String.class)
                 .setParameter("person_id", cedula).getSingleResult();
-        return Response.ok(Formula.calculateParameter(clazz, m2, m3)).build();
+        return Response.ok(Formula.calculateParameter(clazz, m2, m3, arancel)).build();
     }
 
     @GET
