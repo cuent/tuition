@@ -1,2 +1,1 @@
-# Applied data mining for calculate tuition payment based on social status
-
+# Applied data mining for calculating tuition payment
